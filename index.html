@@ -149,48 +149,79 @@ header{height:70px;padding:0 5%}
    ROB JAMES FX — THREE SECTION REDESIGN
    ========================================== */
 
-/* PRODUCTS — EDITORIAL SHOWCASE */
-.rj-products-v2 {position:relative;padding:125px 7%;background:#e9e3d8;color:#171713;overflow:hidden;}
-.rj-products-v2:before {content:"RJFX";position:absolute;top:20px;right:-35px;font-family:'Playfair Display',serif;font-size:clamp(130px,22vw,310px);color:rgba(185,152,87,.08);line-height:1;pointer-events:none;}
-.rj-products-v2 .rj-product-top {position:relative;z-index:1;display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:65px;}
-.rj-products-v2 .rj-product-kicker {color:#9a7841;font-size:13px;letter-spacing:4px;margin-bottom:20px;}
-.rj-products-v2 .rj-product-heading {font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(48px,6vw,82px);line-height:.98;letter-spacing:-2px;}
-.rj-products-v2 .rj-product-heading em {color:#a8894c;}
-.rj-products-v2 .rj-product-intro {max-width:290px;color:#777168;font-size:15.5px;line-height:1.9;padding-bottom:8px;}
-.rj-products-v2 .rj-product-list {position:relative;z-index:1;border-top:1px solid rgba(30,27,22,.22);}
-.rj-products-v2 .rj-product-row {display:grid;grid-template-columns:65px 1fr 1.05fr 180px;align-items:center;gap:30px;min-height:265px;padding:25px 0;border-bottom:1px solid rgba(30,27,22,.22);transition:padding .4s ease;}
-.rj-products-v2 .rj-product-row:hover {padding-left:15px;padding-right:15px;}
-.rj-products-v2 .rj-product-number {font-family:'Playfair Display',serif;color:#a8894c;font-size:17px;}
-.rj-products-v2 .rj-product-photo {height:215px;background:#d8d0c1;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;}
-.rj-products-v2 .rj-product-photo:before {content:"";position:absolute;width:155px;height:155px;border:1px solid rgba(255,255,255,.55);border-radius:50%;}
-.rj-products-v2 .rj-product-photo img {position:relative;z-index:1;width:90%;height:90%;object-fit:contain;transition:transform .7s cubic-bezier(.2,.7,.2,1);}
-.rj-products-v2 .rj-product-row:hover .rj-product-photo img {transform:scale(1.12) rotate(-3deg);}
-.rj-products-v2 .rj-product-copy small {color:#9a7841;font-size:12px;letter-spacing:2px;}
-.rj-products-v2 .rj-product-copy h3 {font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(31px,3.2vw,47px);margin:13px 0;line-height:1.05;}
-.rj-products-v2 .rj-product-copy p {max-width:340px;color:#777168;font-size:14.5px;line-height:1.9;}
-.rj-products-v2 .rj-product-action {display:flex;justify-content:flex-end;}
-.rj-best{margin-top:16px;font-size:13.5px;color:#5f5a50}
-.rj-best span{color:#9a7841;font-size:11px;letter-spacing:2px;font-weight:700;margin-right:10px}
-.rj-products-v2 .rj-product-action a {display:inline-flex;align-items:center;gap:13px;font-size:12px;letter-spacing:1.5px;border-bottom:1px solid #a8894c;padding-bottom:10px;transition:color .3s,gap .3s;}
-.rj-products-v2 .rj-product-action a:hover {color:#a8894c;gap:20px;}
+/* PRODUCTS — FORMULA COLLECTION */
+.rj-fc{position:relative;padding:110px 6%;color:#171713;overflow:hidden;
+  background:
+    radial-gradient(900px 520px at 6% 0%,rgba(255,255,255,.55),transparent 62%),
+    radial-gradient(760px 520px at 100% 100%,rgba(185,152,87,.10),transparent 62%),
+    linear-gradient(135deg,#ece5da 0%,#e2d9ca 100%)}
+.rj-fc__inner{width:100%;display:grid;grid-template-columns:minmax(320px,.72fr) 1.5fr;gap:clamp(40px,5vw,80px);align-items:center}
+.rj-fc__kicker{display:flex;align-items:center;gap:18px;margin-bottom:30px;color:#7d6a4b;font-size:12px;letter-spacing:3.5px;white-space:nowrap}
+.rj-fc__kicker i{flex:0 1 110px;height:1px;background:rgba(122,100,60,.55)}
+.rj-fc__heading{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(46px,5.2vw,76px);line-height:1.04;letter-spacing:-2px}
+.rj-fc__heading em{color:#a8894c;font-style:italic;padding-right:.06em;white-space:nowrap}
+.rj-fc__intro{max-width:380px;margin:28px 0 38px;color:#6b655b;font-size:16px;line-height:1.8}
+.rj-fc__explore{display:inline-flex;align-items:center;gap:16px;padding:16px 28px;border:1px solid #b09256;border-radius:999px;font-size:14.5px;font-weight:500;transition:background .35s,color .35s,border-color .35s,gap .35s}
+.rj-fc__explore svg{width:18px;height:18px;transition:transform .35s}
+.rj-fc__explore:hover{background:#171713;border-color:#171713;color:#f2eee6;gap:20px}
 
-@media(max-width:900px){
-.rj-products-v2{padding:90px 5%}
-.rj-products-v2 .rj-product-row{grid-template-columns:40px 1fr 1fr;gap:18px}
-.rj-products-v2 .rj-product-action{grid-column:2 / 4;justify-content:flex-start}
+.rj-fc__list{display:grid;gap:22px}
+.rj-fc__list .rj-fc__item:nth-child(2){transition-delay:.12s}
+.rj-fc__list .rj-fc__item:nth-child(3){transition-delay:.24s}
+
+.rj-fc__card{position:relative;display:grid;grid-template-columns:1fr 1.05fr;min-height:250px;border-radius:14px;overflow:hidden;
+  background:rgba(245,240,231,.85);
+  box-shadow:0 1px 0 rgba(255,255,255,.75) inset,0 2px 6px rgba(60,45,20,.06),0 22px 44px -26px rgba(60,45,20,.38);
+  transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
+.rj-fc__card:hover{transform:translateY(-4px);box-shadow:0 1px 0 rgba(255,255,255,.75) inset,0 4px 10px rgba(60,45,20,.08),0 30px 54px -24px rgba(60,45,20,.48)}
+.rj-fc__card:focus-visible{outline:2px solid #a8894c;outline-offset:3px}
+
+.rj-fc__media{position:relative;display:flex;align-items:center;justify-content:center;padding:24px;
+  background:radial-gradient(ellipse at 50% 36%,#e6dece 0%,#d6ccba 60%,#c9bea9 100%)}
+.rj-fc__media img{width:auto;max-width:78%;height:auto;max-height:205px;object-fit:contain;
+  filter:drop-shadow(0 16px 14px rgba(30,22,10,.28));transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.rj-fc__card:hover .rj-fc__media img{transform:scale(1.06)}
+
+.rj-fc__copy{position:relative;display:flex;flex-direction:column;justify-content:center;padding:34px 96px 34px 40px}
+.rj-fc__num{display:flex;align-items:center;gap:14px;margin-bottom:14px;font-family:'Playfair Display',serif;font-size:19px;color:#a8894c}
+.rj-fc__num i{width:34px;height:1px;background:rgba(168,137,76,.7)}
+.rj-fc__copy h3{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(30px,3vw,44px);line-height:1.05;letter-spacing:-.5px}
+.rj-fc__copy p{max-width:330px;margin-top:14px;color:#6b655b;font-size:15.5px;line-height:1.6}
+.rj-fc__best{margin-top:18px;font-size:14.5px;color:#4d483f}
+.rj-fc__best b{margin-right:10px;color:#a8894c;font-size:16px;font-weight:600}
+.rj-fc__arrow{position:absolute;right:30px;bottom:22%;display:grid;place-items:center;width:52px;height:52px;border:1px solid #b09256;border-radius:50%;color:#171713;transition:background .35s,color .35s,border-color .35s,transform .35s}
+.rj-fc__arrow svg{width:20px;height:20px}
+.rj-fc__card:hover .rj-fc__arrow{background:#a8894c;border-color:#a8894c;color:#fff;transform:translateX(3px)}
+
+/* dark card (02) */
+.rj-fc__card--dark{grid-template-columns:1.1fr 1fr;color:#f3eee4;background:linear-gradient(120deg,#11100e 0%,#1b1916 100%)}
+.rj-fc__card--dark .rj-fc__media{order:2;background:radial-gradient(ellipse at 58% 40%,#3a362e 0%,#1d1b18 58%,#11100e 100%);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 28%);mask-image:linear-gradient(90deg,transparent 0%,#000 28%)}
+.rj-fc__card--dark .rj-fc__media img{filter:drop-shadow(0 18px 16px rgba(0,0,0,.55))}
+.rj-fc__card--dark .rj-fc__copy{order:1;padding:34px 30px 34px clamp(96px,9vw,128px)}
+.rj-fc__card--dark .rj-fc__copy p{color:#c6c0b2}
+.rj-fc__card--dark .rj-fc__best{color:#e6e0d3}
+.rj-fc__card--dark .rj-fc__best b,.rj-fc__card--dark .rj-fc__num{color:#c2a05f}
+.rj-fc__card--dark .rj-fc__num i{background:rgba(194,160,95,.7)}
+.rj-fc__card--dark .rj-fc__arrow{right:auto;left:38px;color:#f3eee4;border-color:#b09256}
+.rj-fc__card--dark:hover .rj-fc__arrow{background:#c2a05f;border-color:#c2a05f;color:#111;transform:translateX(3px)}
+
+@media(max-width:1100px){
+.rj-fc{padding:90px 5%}
+.rj-fc__inner{grid-template-columns:1fr;gap:48px}
+.rj-fc__intro{max-width:520px}
 }
-@media(max-width:650px){
-.rj-products-v2{padding:75px 6%}
-.rj-products-v2 .rj-product-top{display:block;margin-bottom:35px}
-.rj-products-v2 .rj-product-heading{font-size:53px}
-.rj-products-v2 .rj-product-intro{margin-top:20px}
-.rj-products-v2 .rj-product-row{grid-template-columns:32px 1fr;gap:12px;padding:25px 0}
-.rj-products-v2 .rj-product-number{align-self:start;padding-top:10px}
-.rj-products-v2 .rj-product-photo{grid-column:2;height:270px}
-.rj-products-v2 .rj-product-copy{grid-column:2;padding:8px 0}
-.rj-products-v2 .rj-product-copy h3{font-size:36px}
-.rj-products-v2 .rj-product-action{grid-column:2;justify-content:flex-start}
+@media(max-width:700px){
+.rj-fc{padding:70px 6%}
+.rj-fc__heading{font-size:clamp(42px,12vw,54px)}
+.rj-fc__list{gap:18px}
+.rj-fc__card,.rj-fc__card--dark{grid-template-columns:1fr;min-height:0}
+.rj-fc__media,.rj-fc__card--dark .rj-fc__media{order:0;height:230px;-webkit-mask-image:none;mask-image:none}
+.rj-fc__card--dark .rj-fc__media{background:radial-gradient(ellipse at 50% 40%,#3a362e 0%,#1d1b18 62%,#11100e 100%)}
+.rj-fc__copy,.rj-fc__card--dark .rj-fc__copy{order:1;padding:26px 24px 84px}
+.rj-fc__arrow,.rj-fc__card--dark .rj-fc__arrow{left:auto;right:22px;bottom:22px}
 }
+@media(prefers-reduced-motion:reduce){.rj-fc__card,.rj-fc__media img,.rj-fc__arrow{transition:none}}
 
 
 /* CUSTOMER STORIES — CLEAN THREE-CARD RESPONSIVE LAYOUT */
@@ -392,8 +423,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 
 /* ===== UNIFIED LAYOUT: same width + same side spacing for every section ===== */
 :root{--maxw:1280px;--gutter:clamp(20px,5vw,72px);--side:max(var(--gutter),calc((100% - var(--maxw))/2));--sec-y:clamp(70px,8vw,120px)}
-header,.rj-products-v2,.rj-customer-stories,.ingredients,.rj-fbuilt,.faq,.final-cta,footer{padding-left:var(--side)!important;padding-right:var(--side)!important}
-.rj-products-v2,.rj-customer-stories,.ingredients,.rj-fbuilt,.faq,.final-cta{padding-top:var(--sec-y)!important;padding-bottom:var(--sec-y)!important}
+header,.rj-fc,.rj-customer-stories,.ingredients,.rj-fbuilt,.faq,.final-cta,footer{padding-left:var(--side)!important;padding-right:var(--side)!important}
+.rj-fc,.rj-customer-stories,.ingredients,.rj-fbuilt,.faq,.final-cta{padding-top:var(--sec-y)!important;padding-bottom:var(--sec-y)!important}
 .hero-content{padding-left:max(var(--gutter),calc((100vw - var(--maxw))/2))!important;padding-right:clamp(24px,5vw,72px)!important}
 .rj-customer-stories__inner,.faq-inner,.rj-fbuilt-inner{max-width:none!important;width:100%;margin:0}
 .faq-inner{grid-template-columns:minmax(0,.9fr) minmax(0,1.6fr)}
@@ -484,7 +515,7 @@ header.scrolled{box-shadow:0 8px 30px rgba(30,27,22,.09)}
 
 /* ===== HEADINGS: one size for every section heading, hero is the only exception ===== */
 :root{--h2-size:clamp(34px,4.4vw,60px)}
-.rj-products-v2 .rj-product-heading,
+.rj-fc__heading,
 .rj-customer-stories__heading h2,
 .ingredient-content h2,
 .rj-fbuilt h2,
@@ -497,13 +528,13 @@ header.scrolled{box-shadow:0 8px 30px rgba(30,27,22,.09)}
 
 /* ===== HEADING COLOR PATTERN: dark first line + gold italic emphasis (light text on the dark story section) ===== */
 :root{--h-dark:#171713;--h-gold:#a8894c}
-.rj-products-v2 .rj-product-heading,
+.rj-fc__heading,
 .rj-customer-stories__heading h2,
 .ingredient-content h2,
 .faq h2,
 .final-cta h2{color:var(--h-dark)!important}
 .rj-fbuilt h2{color:#f4efe4!important}
-.rj-products-v2 .rj-product-heading em,
+.rj-fc__heading em,
 .rj-customer-stories__heading h2 em,
 .ingredient-content h2 em,
 .faq h2 em,
@@ -512,9 +543,9 @@ header.scrolled{box-shadow:0 8px 30px rgba(30,27,22,.09)}
 .rj-fbuilt h2 em{color:#c2a05f!important;font-style:italic!important;font-weight:500!important}
 
 /* ===== CONTRAST FIXES (WCAG AA) ===== */
-.eyebrow,.rj-product-kicker,.rj-customer-stories__eyebrow,.rj-products-v2 .rj-product-copy small,.rj-product-number{color:#7d5f2b!important}
+.eyebrow,.rj-fc__kicker,.rj-customer-stories__eyebrow,.rj-products-v2 .rj-product-copy small,.rj-product-number{color:#7d5f2b!important}
 .rj-fbuilt .rj-fbuilt-eyebrow{color:var(--gold)!important}
-.ingredient-row p,.ingredient-content>p,.rj-products-v2 .rj-product-copy p,.rj-products-v2 .rj-product-intro,.rj-customer-stories__heading>p,.final-cta p{color:#5f5a50!important}
+.ingredient-row p,.ingredient-content>p,.rj-fc__intro,.rj-fc__card:not(.rj-fc__card--dark) .rj-fc__copy p,.rj-customer-stories__heading>p,.final-cta p{color:#5f5a50!important}
 </style>
 <!-- Add your Google Tag Manager / GA4 snippet here. The page already pushes cta_click, faq_toggle and scroll_depth to dataLayer. -->
 <noscript><style>.reveal{opacity:1!important;transform:none!important}.hero-content>*,.hero-visual{opacity:1!important;animation:none!important}</style></noscript>
@@ -575,36 +606,54 @@ header.scrolled{box-shadow:0 8px 30px rgba(30,27,22,.09)}
 </div>
 </div>
 
-<!-- PRODUCTS REDESIGNED -->
-<section class="rj-products-v2" id="products">
-  <div class="rj-product-top reveal">
-    <div>
-      <div class="rj-product-kicker">THE FORMULA COLLECTION</div>
-      <h2 class="rj-product-heading">Find your<br><em>perfect formula.</em></h2>
+<!-- FORMULA COLLECTION -->
+<section class="rj-fc" id="products">
+  <div class="rj-fc__inner">
+    <div class="rj-fc__intro-wrap reveal">
+      <div class="rj-fc__kicker">THE FORMULA COLLECTION<i></i></div>
+      <h2 class="rj-fc__heading">Find your<br><em>perfect</em> formula.</h2>
+      <p class="rj-fc__intro">Three purpose-built solutions. One simple goal: helping you feel confident in your skin every day.</p>
+      <a class="rj-fc__explore" href="https://robjamesfx.com/collections/all?utm_source=landing&utm_medium=formula-collection" data-cta="explore-collection">Explore Collection <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
     </div>
-    <p class="rj-product-intro">Three purpose-built solutions. One simple goal: helping you feel confident in your skin every day.</p>
+    <div class="rj-fc__list">
+      <div class="rj-fc__item reveal">
+        <a class="rj-fc__card" href="https://robjamesfx.com/products/rob-james-fx-matte-look?utm_source=landing&utm_medium=product-row" data-cta="shop-matte-look" aria-label="Shop Matte Look">
+          <div class="rj-fc__media"><img src="./images/1.png" alt="Matte Look 50ml jar" width="600" height="600" loading="lazy"></div>
+          <div class="rj-fc__copy">
+            <span class="rj-fc__num">01<i></i></span>
+            <h3>Matte Look</h3>
+            <p>Lightweight daily hydration with comfortable anti-shine performance.</p>
+            <div class="rj-fc__best"><b>Best for</b>Everyday shine control</div>
+            <span class="rj-fc__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+      </div>
+      <div class="rj-fc__item reveal">
+        <a class="rj-fc__card rj-fc__card--dark" href="https://robjamesfx.com/products/rob-james-fx-shine-block-anti-shine-scalp-cream?utm_source=landing&utm_medium=product-row" data-cta="shop-shine-block" aria-label="Shop Shine Block">
+          <div class="rj-fc__media"><img src="./images/2.png" alt="Shine Block 50ml jar" width="600" height="600" loading="lazy"></div>
+          <div class="rj-fc__copy">
+            <span class="rj-fc__num">02<i></i></span>
+            <h3>Shine Block</h3>
+            <p>Dedicated anti-shine performance for high-shine and oily scalps.</p>
+            <div class="rj-fc__best"><b>Best for</b>High-shine and oily scalps</div>
+            <span class="rj-fc__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+      </div>
+      <div class="rj-fc__item reveal">
+        <a class="rj-fc__card" href="https://robjamesfx.com/products/rob-james-fx-matte-shield%E2%84%A2?utm_source=landing&utm_medium=product-row" data-cta="shop-matte-shield" aria-label="Shop Matte Shield">
+          <div class="rj-fc__media"><img src="./images/3.png" alt="Matte Shield 50ml jar" width="600" height="600" loading="lazy"></div>
+          <div class="rj-fc__copy">
+            <span class="rj-fc__num">03<i></i></span>
+            <h3>Matte Shield</h3>
+            <p>Tinted mineral SPF 40 protection with a natural matte finish.</p>
+            <div class="rj-fc__best"><b>Best for</b>Sun protection every day</div>
+            <span class="rj-fc__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
-  <div class="rj-product-list">
-    <article class="rj-product-row reveal">
-      <div class="rj-product-number">01</div>
-      <div class="rj-product-photo"><img src="./images/1.png" alt="Matte Look product" width="600" height="600" loading="lazy"></div>
-      <div class="rj-product-copy"><small>EVERYDAY CONTROL</small><h3>Matte Look</h3><p>Lightweight daily hydration with comfortable anti-shine performance.</p><div class="rj-best"><span>BEST FOR</span>Everyday shine control</div></div>
-      <div class="rj-product-action"><a class="rj-buy" href="https://robjamesfx.com/products/rob-james-fx-matte-look?utm_source=landing&utm_medium=product-row" data-cta="shop-matte-look">SHOP MATTE LOOK <span>↗</span></a><!-- PRICE: add e.g. <span class="rj-price">$00</span> --></div>
-    </article>
-    <article class="rj-product-row reveal">
-      <div class="rj-product-number">02</div>
-      <div class="rj-product-photo"><img src="./images/2.png" alt="Shine Block product" width="600" height="600" loading="lazy"></div>
-      <div class="rj-product-copy"><small>MAXIMUM CONTROL</small><h3>Shine Block</h3><p>Dedicated anti-shine performance for high-shine and oily scalps.</p><div class="rj-best"><span>BEST FOR</span>High-shine and oily scalps</div></div>
-      <div class="rj-product-action"><a class="rj-buy" href="https://robjamesfx.com/products/rob-james-fx-shine-block-anti-shine-scalp-cream?utm_source=landing&utm_medium=product-row" data-cta="shop-shine-block">SHOP SHINE BLOCK <span>↗</span></a><!-- PRICE: add e.g. <span class="rj-price">$00</span> --></div>
-    </article>
-    <article class="rj-product-row reveal">
-      <div class="rj-product-number">03</div>
-      <div class="rj-product-photo"><img src="./images/3.png" alt="Matte Shield product" width="600" height="600" loading="lazy"></div>
-      <div class="rj-product-copy"><small>DAILY PROTECTION</small><h3>Matte Shield</h3><p>Tinted mineral SPF 40 protection with a natural matte finish.</p><div class="rj-best"><span>BEST FOR</span>Sun protection every day</div></div>
-      <div class="rj-product-action"><a class="rj-buy" href="https://robjamesfx.com/products/rob-james-fx-matte-shield%E2%84%A2?utm_source=landing&utm_medium=product-row" data-cta="shop-matte-shield">SHOP MATTE SHIELD <span>↗</span></a><!-- PRICE: add e.g. <span class="rj-price">$00</span> --></div>
-    </article>
-  </div>
-
 </section>
 
 <!-- CUSTOMER STORIES — THREE CUSTOMER PHOTOS ONLY -->
